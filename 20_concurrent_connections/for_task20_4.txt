@@ -1,0 +1,28 @@
+R1#sh clock
+*21:23:58.727 UTC Fri Nov 1 2019
+R2#sh clock
+*21:23:58.307 UTC Fri Nov 1 2019
+R3#sh clock
+*21:23:58.375 UTC Fri Nov 1 2019
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#for_task_20_4.txt
+              ^
+% Invalid input detected at '^' marker.
+
+R1(config)#end
+R1#config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#for_task_20_4.txt
+              ^
+% Invalid input detected at '^' marker.
+
+R2(config)#end
+R2#config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#for_task_20_4.txt
+              ^
+% Invalid input detected at '^' marker.
+
+R3(config)#end
+R3#
