@@ -1,0 +1,31 @@
+{
+    "FastEthernet0/0": {
+        "bandwidth": 100000,
+        "description": null,
+        "duplex": null,
+        "ipv4": [
+            {
+                "address": "192.168.100.2",
+                "subnet": "24"
+            }
+        ],
+        "lineprotocol": "up",
+        "macaddress": "ca02.062d.0008",
+        "mediatype": null,
+        "mtu": 1500,
+        "operstatus": "up",
+        "type": "i82543 (Livengood)"
+    },
+    "FastEthernet0/1": {
+        "bandwidth": 100000,
+        "description": null,
+        "duplex": null,
+        "ipv4": [],
+        "lineprotocol": "down",
+        "macaddress": "ca02.062d.0006",
+        "mediatype": null,
+        "mtu": 1500,
+        "operstatus": "administratively down",
+        "type": "i82543 (Livengood)"
+    }
+}

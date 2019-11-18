@@ -1,0 +1,32 @@
+---
+- name: set ACL
+  hosts: 192.168.100.1
+  gather_facts: false
+  tasks:
+  
+  - name: Remove ACL from intf
+    ios_config:
+      parents:
+      - interface FastEthernet0/1
+      lines:
+      - no ip access-group INET-to-LAN in
+  
+  - name: Create ACL
+    ios_config:
+      before:
+      - no ip access-list extended INET-to-LAN
+      parents:
+      - ip access-list extended INET-to-LAN
+      lines:
+      - permit tcp 10.0.1.0 0.0.0.255 any eq www
+      - permit tcp any any eq 22
+      - permit icmp any any
+      match: exact
+  
+  - name: add ACL to intf
+    ios_config:
+      parents:
+      - interface FastEthernet0/1
+      lines:
+      - ip access-group INET-to-LAN in
+

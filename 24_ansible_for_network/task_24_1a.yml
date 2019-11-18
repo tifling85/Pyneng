@@ -1,0 +1,11 @@
+---
+- name: run and show arp
+  hosts: cisco-routers
+  gather_facts: false
+  tasks:
+  - name: show arp
+    raw: show arp
+    register: sh_arp_output
+
+  - name: debug arp
+    debug: var=sh_arp_output.stdout_lines
